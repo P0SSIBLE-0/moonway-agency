@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+  --font-handwriting: var(--font-permanent-marker);
+  --font-serif: var(--font-playfair);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-pop-purple: #B6ABF8;
+  --color-pop-red: #E84E38;
+  --color-pop-green: #B9E986;
+  --color-pop-black: #111111;
+  --color-pop-yellow: #F4D06F;
+  --color-pop-offwhite: #F9F9F9;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-marquee: marquee 25s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 35s linear infinite;
+  --animate-marquee-infinite: marquee-infinite 50s linear infinite;
+  --animate-marquee-infinite-reverse: marquee-infinite-reverse 50s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
   }
+
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes marquee-infinite {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-infinite-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  --animate-spin-slow: spin 6s linear infinite;
+}
+
+:root {
+  --background: #F9F9F9;
+  --foreground: #111111;
+  --font-inter: "Inter", sans-serif;
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+  --font-playfair: "Playfair Display", serif;
 }
 
 body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Custom Utilities for the pop look */
+.text-stroke-2 {
+  -webkit-text-stroke: 2px black;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 2px white;
+}
+
+.shadow-hard {
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hard-sm {
+  box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.shadow-hard-reverse {
+  box-shadow: -6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-pop-offwhite);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-pop-purple);
+  border-radius: 5px;
 }
