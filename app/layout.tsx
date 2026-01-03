@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: "https://moonway-agency.vercel.app",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://moonway-agency.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Moonway | Content On Demand",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Moonway - SEM & Paid Ads Agency | Marketing Agency",
     description: "Moonway helps brands grow with SEM, paid ads, modern websites, e-commerce solutions, and high-impact digital marketing strategies.",
     card: "summary_large_image",
-    images: ["/og-image.png"],
+    images: ["https://moonway-agency.vercel.app/og-image.png"],
   },
 };
 
