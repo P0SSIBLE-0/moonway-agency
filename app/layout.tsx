@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en",
     siteName: "Moonway",
-    url: "https://moonway.vercel.app",
+    url: "https://moonway-agency.vercel.app",
     images: [
       {
         url: "/og-image.png",

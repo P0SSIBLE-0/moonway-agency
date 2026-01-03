@@ -2,6 +2,8 @@
 
 Moonway is a modern, responsive, and accessible Next.js template for building landing pages and marketing websites. It is built with the latest version of Next.js and includes a variety of features and components to help you create a professional and engaging website.
 
+[Moonway - live demo](https://moonway-agency.vercel.app)
+
 ## Tech Stack
 
 - Next.js
