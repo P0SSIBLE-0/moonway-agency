@@ -1,10 +1,10 @@
 // Header links
 export const links = [
     { href: "/", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#services", label: "Services" },
-    { href: "#blogs", label: "Blogs" },
-    { href: "#contact", label: "Contact Us" },
+    { href: "/about", label: "About Us" },
+    { href: "/services", label: "Services" },
+    { href: "/blog", label: "Blogs" },
+    { href: "/contact", label: "Contact Us" },
 ];
 // HOMEPAGE TESTIMONIALS
 export const testimonials = [
@@ -88,6 +88,81 @@ export const projects = [
         image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&q=80&w=800",
         color: "from-cyan-500 to-blue-500",
         slug: "#social-marketing"
+    }
+];
+
+// SERVICES PAGE CONTENT
+export const servicesContent = [
+    {
+        title: "Graphic Design",
+        tagline: "Your Brand's Visual Voice",
+        description: "Every scroll, every glance, every split second counts. In a world where attention is currency, your visuals need to speak before words ever do.\n\nWe don't just design graphics—we craft visual experiences that stop thumbs mid-scroll and turn casual viewers into captivated audiences. From brand identities that echo in memory to social media designs that demand engagement, we transform your vision into visuals that resonate.",
+        featuresTitle: "What We Create",
+        features: [
+            "Brand Identity & Logo Design that tells your story at a glance",
+            "Social Media Graphics that cut through the noise",
+            "Marketing Materials that convert curiosity into action",
+            "Packaging Design that turns products into experiences",
+            "Illustrations & Custom Graphics that capture your unique essence"
+        ],
+        conclusion: "Your brand deserves more than templates. It deserves a design that feels distinctly, unmistakably you.",
+        color: "bg-pop-purple",
+        icon: "PenTool",
+        slug: "graphic-design"
+    },
+    {
+        title: "Social Media Marketing",
+        tagline: "Where Conversations Become Conversions",
+        description: "Social media isn't about posting—it's about presence. It's about being where your audience lives, speaks, and makes decisions.\n\nWe build social strategies that don't just chase algorithms but understand human behavior. From content that sparks genuine engagement to community management that builds loyalty, we turn your social channels into powerful business assets.",
+        featuresTitle: "Our Approach Includes",
+        features: [
+            "Strategy Development tailored to your audience and goals",
+            "Content Creation that balances creativity with conversion",
+            "Community Management that turns followers into advocates",
+            "Performance Analytics that inform smarter decisions",
+            "Trend Integration that keeps your brand culturally relevant",
+            "Influencer Partnerships that expand your reach authentically"
+        ],
+        conclusion: "Social media is your brand's living, breathing conversation with the world. Let's make it count.",
+        color: "bg-pop-green",
+        icon: "MessageCircle",
+        slug: "social-media-marketing"
+    },
+    {
+        title: "Meta & Google Ads",
+        tagline: "Precision-Targeted Growth",
+        description: "Visibility without strategy is just noise. Results without ROI is just expense.\n\nWe create advertising campaigns that work as hard as you do—targeting the right people, at the right time, with the right message. Whether it's Meta's social ecosystem or Google's search intent, we turn ad spend into measurable growth.",
+        featuresTitle: "What We Deliver",
+        features: [
+            "Meta Ads (Facebook & Instagram): Audience targeting that finds your ideal customers",
+            "Creative ad formats that stop the scroll",
+            "Retargeting campaigns that bring browsers back as buyers",
+            "A/B testing for continuous optimization",
+            "Google Ads: Search campaigns that capture high-intent customers",
+            "Display advertising for brand awareness at scale",
+            "Shopping campaigns that showcase your products perfectly",
+            "Remarketing strategies that maximize conversion opportunities"
+        ],
+        conclusion: "Every amount you invest deserves a return. We make sure it does.",
+        color: "bg-pop-red",
+        icon: "Target",
+        slug: "meta-google-ads"
+    },
+    {
+        title: "Website Development",
+        tagline: "Your Digital Foundation",
+        description: "Your website isn't just a URL—it's your 24/7 storefront, your brand ambassador, your conversion engine.\n\nWhether you need the flexibility of Shopify, the power of WordPress, or the limitless possibilities of custom code, we build websites that are as functional as they are beautiful. Fast-loading, mobile-optimized, and designed for growth.",
+        featuresTitle: "Platform Expertise",
+        features: [
+            "Shopify Development: Perfect for e-commerce brands ready to scale. We create online stores that make buying effortless and selling profitable.",
+            "WordPress Development: Ideal for content-rich sites and businesses that value flexibility. From blogs to complex business sites, we harness WordPress's power without the bloat.",
+            "Custom Code Development: For visions that refuse to fit in boxes. We build from scratch using HTML, CSS, JavaScript, and modern frameworks.",
+            "Every Website Includes: Responsive design, Speed optimization, Security measures, Analytics integration"
+        ],
+        conclusion: "Your website should work for your business, not against it. Let's build something that performs.",
+        color: "bg-pop-yellow",
+        icon: "Code",
+        slug: "website-development"
     }
 ];
 

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 @theme {
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);

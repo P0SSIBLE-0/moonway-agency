@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Permanent_Marker, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/ui/Navbar";
+import Footer from "./components/ui/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,12 +36,11 @@ export const metadata: Metadata = {
     title: "Moonway - SEM & Paid Ads Agency | Marketing Agency",
     description: "Moonway helps brands grow with SEM, paid ads, modern websites, e-commerce solutions, and high-impact digital marketing strategies.",
     type: "website",
-    locale: "en",
     siteName: "Moonway",
     url: "https://moonway-agency.vercel.app",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Moonway | Content On Demand",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
     title: "Moonway - SEM & Paid Ads Agency | Marketing Agency",
     description: "Moonway helps brands grow with SEM, paid ads, modern websites, e-commerce solutions, and high-impact digital marketing strategies.",
     card: "summary_large_image",
-    images: ["/og-image.png"],
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -64,7 +65,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} ${permanentMarker.variable} ${playfair.variable} antialiased font-sans bg-zinc-900 text-white selection:bg-purple-100 selection:text-purple-900`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

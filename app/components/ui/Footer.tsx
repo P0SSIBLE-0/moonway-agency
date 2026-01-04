@@ -33,10 +33,10 @@ export default function Footer() {
                             <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-white">
                                 Have questions? <Smile className="text-purple-500 w-5 h-5" />
                             </h3>
-                            <button className="w-full bg-white text-black font-bold uppercase py-3 rounded-lg hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2 group">
+                            <a href="tel:+919876543210" className="w-full bg-white text-black font-bold uppercase py-3 rounded-lg hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2 group">
                                 Book a Call
                                 <ArrowUpRight className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-                            </button>
+                            </a>
                         </div>
                     </div>
 

@@ -8,7 +8,7 @@ import { Menu, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { links } from "@/data/constants";
-
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -19,6 +19,9 @@ export default function Navbar() {
         setScrolled(latest > 50);
     });
 
+    const pathname = usePathname();
+    const isActive = (path: string) => pathname === path;
+
     return (
         <motion.header
             initial={{ y: -100 }}
@@ -28,7 +31,7 @@ export default function Navbar() {
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full",
                 scrolled
                     ? "bg-black/90 backdrop-blur-md border-b border-zinc-800 py-4"
-                    : "bg-transparent py-6"
+                    : "bg-transparent py-6 text-gray-100"
             )}
         >
             <Container className="flex items-center justify-between">
@@ -46,10 +49,10 @@ export default function Navbar() {
                         <Link
                             key={link.label}
                             href={link.href}
-                            className="text-sm font-medium uppercase tracking-wider text-zinc-300 hover:text-orange-500 transition-colors relative group"
+                            className={cn("text-sm uppercase tracking-wider font-semibold text-neutral-400 hover:text-purple-500 transition-colors relative group", isActive(link.href) && "text-purple-500/90", scrolled && "text-white")}
                         >
                             {link.label}
-                            <span className="absolute -bottom-1 left-0 w-0 h-px bg-orange-500 transition-all group-hover:w-full" />
+                            <span className="absolute -bottom-1 left-0 w-0 h-px bg-purple-500 transition-all group-hover:w-full" />
                         </Link>
                     ))}
                 </nav>
@@ -60,7 +63,7 @@ export default function Navbar() {
                     className="lg:hidden text-white"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
-                    {mobileMenuOpen ? <X /> : <Menu />}
+                    {mobileMenuOpen ? <X /> : <Menu className={`text-${scrolled ? "white" : "gray-400"}`} />}
                 </button>
             </Container>
 
