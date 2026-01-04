@@ -2,7 +2,7 @@ import React from "react";
 import { fetchBlogPosts, HashnodePost } from "@/lib/hashnode";
 import BlogClient from "./BlogClient";
 
-const HASHNODE_HOST = process.env.NEXT_PUBLIC_HASHNODE_HOST!;
+const HASHNODE_HOST = process.env.NEXT_PUBLIC_HASHNODE_HOST || "codehero.hashnode.dev";
 if (!HASHNODE_HOST) {
     throw new Error("NEXT_PUBLIC_HASHNODE_HOST environment variable is not set");
 }
