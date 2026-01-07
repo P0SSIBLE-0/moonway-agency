@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "motion/react";
 import Link from "next/link";
-import Container from "./Container";
+import Container from "../ui/Container";
 import { Menu, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -49,7 +49,7 @@ export default function Navbar() {
                         <Link
                             key={link.label}
                             href={link.href}
-                            className={cn("text-sm uppercase tracking-wider font-semibold text-neutral-400 hover:text-purple-500 transition-colors relative group", isActive(link.href) && "text-purple-500/90", scrolled && "text-white")}
+                            className={cn("text-sm uppercase tracking-wider font-semibold text-neutral-400 hover:text-purple-500 transition-colors relative group", scrolled && "text-white", isActive(link.href) && "text-purple-500/90",)}
                         >
                             {link.label}
                             <span className="absolute -bottom-1 left-0 w-0 h-px bg-purple-500 transition-all group-hover:w-full" />

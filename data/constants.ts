@@ -169,10 +169,10 @@ export const servicesContent = [
 // FOOTER DETAILS
 export const footerDetails = {
     socials: [
-        { name: "Instagram", url: "#" },
-        { name: "Twitter / X", url: "#" },
-        { name: "LinkedIn", url: "#" },
-        { name: "Dribbble", url: "#" }
+        { name: "Instagram", url: "https://www.instagram.com/moonwaydigital/" },
+        { name: "Facebook", url: "https://www.facebook.com/digitalmoonway" },
+        { name: "Twitter / X", url: "https://x.com/moonway_digital" },
+        { name: "LinkedIn", url: "https://www.linkedin.com/company/moonwaydigital-the-advertisement-agency" },
     ],
     quickLinks: [
         { name: "Work", url: "/work" },
@@ -187,8 +187,8 @@ export const footerDetails = {
         { name: "Cookie Policy", url: "/cookies" },
     ],
     contact: {
-        email: "hello@moonway.agency",
-        phone: "+1 (555) 123-4567",
-        address: "123 Creative Blvd, Design City, DC 10101"
+        email: "Imdigitalabhishek@gmail.com",
+        phone: "+91 9990053034",
+        address: "bawana, delhi - 110039"
     }
 };

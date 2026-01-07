@@ -1,5 +1,5 @@
 "use client";
-import Container from "./Container";
+import Container from "../ui/Container";
 import { motion } from "motion/react";
 import { Star, MessageSquareQuote } from "lucide-react";
 import Image from "next/image";

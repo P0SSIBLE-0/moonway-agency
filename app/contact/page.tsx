@@ -1,13 +1,13 @@
 "use client";
 
-import React from "react";
 import { motion } from "motion/react";
 import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight } from "lucide-react";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/sections/ContactForm";
+import { footerDetails } from "@/data/constants";
 
 export default function ContactPage() {
     return (
-        <main className="min-h-screen bg-[#FDFDFC] font-sans text-slate-900 overflow-x-hidden selection:bg-indigo-500 selection:text-white">
+        <main className="min-h-screen bg-pop-black font-sans text-neutral-200 overflow-x-hidden selection:bg-indigo-500 selection:text-purple-400">
             {/* 1. Hero Section */}
             <section className="relative pt-40 pb-20 md:pt-48 md:pb-32 px-4 md:px-6 overflow-hidden">
                 {/* Background Ethereal Effects */}
@@ -18,20 +18,20 @@ export default function ContactPage() {
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
                         className="max-w-4xl"
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-100 bg-indigo-50/50 text-indigo-600 text-xs font-bold uppercase tracking-wider mb-8">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-100 bg-indigo-300 text-indigo-600 text-xs font-bold uppercase tracking-wider mb-8">
                             <span className="w-2 h-2 rounded-full bg-indigo-500 animate-pulse" />
                             Get in Touch
                         </div>
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8 text-slate-900">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] mb-8 text-white">
                             Let's Build Something <br />
                             <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-600 to-purple-600">
                                 Extraordinary.
                             </span>
                         </h1>
-                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl leading-relaxed font-light">
+                        <p className="text-lg md:text-xl text-neutral-400 max-w-2xl leading-relaxed font-light">
                             Have a project in mind? We'd love to hear about it. Send us a message and let's start a conversation.
                         </p>
                     </motion.div>
@@ -52,37 +52,36 @@ export default function ContactPage() {
                                 className="space-y-6"
                             >
                                 {/* Info Cards */}
-                                <div className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
-                                    <div className="w-12 h-12 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
+                                <div className="group p-6 rounded-lg  border border-zinc-800 shadow-xl shadow-zinc-900/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
+                                    <div className="w-12 h-12 rounded-lg flex items-center justify-center text-indigo-600 mb-6 group-hover:scale-110 transition-transform">
                                         <Mail size={24} />
                                     </div>
                                     <h3 className="text-xl font-bold mb-2">Chat to us</h3>
                                     <p className="text-slate-500 mb-4 font-light">Our friendly team is here to help.</p>
                                     <a href="mailto:hello@moonway.agency" className="text-indigo-600 font-semibold hover:text-indigo-700 flex items-center gap-2">
-                                        hello@moonway.agency <ArrowRight size={16} />
+                                        {footerDetails.contact.email}  <ArrowRight size={16} />
                                     </a>
                                 </div>
 
-                                <div className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300">
-                                    <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
+                                <div className="group p-6 rounded-lg border border-zinc-800 shadow-xl shadow-zinc-900/50 hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-300">
+                                    <div className="w-12 h-12 rounded-xl flex items-center justify-center text-purple-600 mb-6 group-hover:scale-110 transition-transform">
                                         <MapPin size={24} />
                                     </div>
                                     <h3 className="text-xl font-bold mb-2">Visit us</h3>
-                                    <p className="text-slate-500 mb-4 font-light">Come say hello at our office HQ.</p>
-                                    <address className="not-italic text-slate-900 font-medium">
-                                        100 Smith Street <br />
-                                        Collingwood VIC 3066 AU
+                                    <p className="text-slate-300 mb-4 font-light">Come say hello at our office HQ.</p>
+                                    <address className="not-italic text-slate-200 font-medium">
+                                        {footerDetails.contact.address}
                                     </address>
                                 </div>
 
-                                <div className="group p-8 rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
-                                    <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
+                                <div className="group p-6 rounded-lg border border-zinc-800 shadow-xl shadow-zinc-900/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300">
+                                    <div className="w-12 h-12 rounded-xl flex items-center justify-center text-blue-600 mb-6 group-hover:scale-110 transition-transform">
                                         <Phone size={24} />
                                     </div>
                                     <h3 className="text-xl font-bold mb-2">Call us</h3>
-                                    <p className="text-slate-500 mb-4 font-light">Mon-Fri from 8am to 5pm.</p>
-                                    <a href="tel:+1(555)000-0000" className="text-slate-900 font-medium hover:text-indigo-600 transition-colors">
-                                        +1 (555) 000-0000
+                                    <p className="text-slate-500 mb-3 font-light">Mon-Fri from 8am to 5pm.</p>
+                                    <a href="tel:+91 9990053034" className="text-slate-100 font-medium hover:text-indigo-600 transition-colors">
+                                        +91 9990053034
                                     </a>
                                 </div>
                             </motion.div>

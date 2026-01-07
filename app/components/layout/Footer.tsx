@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Container from "./Container";
+import Container from "../ui/Container";
 import Link from "next/link";
 import { Smile, ArrowUpRight } from "lucide-react";
-import Marquee from "./Marquee";
+import Marquee from "../ui/Marquee";
 import { footerDetails } from "@/data/constants";
 import { motion } from "motion/react";
 
@@ -33,8 +33,8 @@ export default function Footer() {
                             <h3 className="font-bold text-lg mb-4 flex items-center gap-2 text-white">
                                 Have questions? <Smile className="text-purple-500 w-5 h-5" />
                             </h3>
-                            <a href="tel:+919876543210" className="w-full bg-white text-black font-bold uppercase py-3 rounded-lg hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2 group">
-                                Book a Call
+                            <a href="tel:+919990053034" className="w-full bg-white text-black font-bold uppercase py-3 rounded-lg hover:bg-zinc-200 transition-colors flex items-center justify-center gap-2 group">
+                                Make a Call
                                 <ArrowUpRight className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                             </a>
                         </div>
@@ -83,7 +83,7 @@ export default function Footer() {
                                     {footerDetails.contact.phone}
                                 </li>
                                 <li>
-                                    <span className="block text-zinc-600 text-xs mb-1">Office</span>
+                                    <span className="block text-zinc-600 text-xs mb-1">Location</span>
                                     {footerDetails.contact.address}
                                 </li>
                             </ul>

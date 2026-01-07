@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Container from "./Container";
-import Button from "./Button";
+import Container from "../ui/Container";
+import Button from "../ui/Button";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "motion/react";
 

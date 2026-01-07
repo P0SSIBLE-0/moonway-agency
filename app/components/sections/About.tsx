@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Container from "./Container";
+import Container from "../ui/Container";
 import { motion } from "motion/react";
 import { CheckCircle2 } from "lucide-react";
 

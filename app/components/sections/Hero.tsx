@@ -1,10 +1,11 @@
 "use client";
 
-import Container from "./Container";
+import Container from "../ui/Container";
 import { motion } from "motion/react";
-import Button from "./Button";
+import Button from "../ui/Button";
 import Image from "next/image";
 import { Play, ArrowUpRight } from "lucide-react";
+import CTAButton from "../ui/CTAButton";
 
 export default function Hero() {
     return (
@@ -43,10 +44,7 @@ export default function Hero() {
                             transition={{ duration: 0.8, delay: 0.3 }}
                             className="flex flex-wrap gap-8 items-center pt-8"
                         >
-                            <Button size="lg" className="rounded-full bg-purple-600 border-2 border-purple-600 text-white hover:bg-transparent hover:text-white px-10 h-14 font-bold uppercase tracking-wider cursor-pointer">
-                                Let's Talk
-                                <ArrowUpRight className="ml-2 w-5 h-5" />
-                            </Button>
+                            <CTAButton />
                             <div className="text-zinc-400 max-w-xs text-sm leading-relaxed border-l border-zinc-700 pl-4">
                                 We help businesses grow with marketing, websites, and visually striking design—powered by strategy, not guesswork.
                             </div>
@@ -71,30 +69,7 @@ export default function Hero() {
                             />
                         </motion.div>
 
-                        {/* Floating Video Card */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.6 }}
-                            className="absolute bottom-10 right-0 lg:-right-4 w-72 h-44 bg-zinc-900/80 backdrop-blur-md rounded-2xl border border-zinc-700 overflow-hidden shadow-2xl z-20 group cursor-pointer"
-                        >
-                            <Image
-                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=500"
-                                alt="Video Thumbnail"
-                                fill
-                                className="object-cover opacity-60 group-hover:opacity-40 transition-opacity"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-12 h-12 rounded-full bg-purple-600/90 flex items-center justify-center text-white pl-1 shadow-lg group-hover:scale-110 transition-transform">
-                                    <Play className="w-5 h-5 fill-current" />
-                                </div>
-                            </div>
 
-                            {/* Decorative star */}
-                            <div className="absolute top-4 right-4 text-purple-500 font-bold text-3xl animate-spin-slow">
-                                *
-                            </div>
-                        </motion.div>
 
                         {/* Background decoration text behind image */}
                         <div className="absolute top-1/2 left-20 -translate-x-1/2 -translate-y-1/2 text-[16rem] font-bold text-zinc-900/70 pointer-events-none select-none -z-10 uppercase whitespace-nowrap hidden lg:block">

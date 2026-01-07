@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Container from "./Container";
+import Container from "../ui/Container";
 import { motion } from "motion/react";
 import Image from "next/image";
-import Button from "./Button";
+import Button from "../ui/Button";
 
 const projects = [
     {

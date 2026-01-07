@@ -1,8 +1,8 @@
-import Hero from "./components/ui/Hero";
-import OurWork from "./components/ui/OurWork";
+import Hero from "./components/sections/Hero";
+import OurWork from "./components/sections/OurWork";
 import Marquee from "./components/ui/Marquee";
-import Services from "./components/ui/Services";
-import Testimonials from "./components/ui/Testimonials";
+import Services from "./components/sections/Services";
+import Testimonials from "./components/sections/Testimonials";
 
 export default function Home() {
   return (

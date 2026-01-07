@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import Container from "./Container";
+import Container from "../ui/Container";
 import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import Image from "next/image";

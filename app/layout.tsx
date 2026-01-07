@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Permanent_Marker, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/ui/Navbar";
-import Footer from "./components/ui/Footer";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],

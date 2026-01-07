@@ -2,12 +2,13 @@
 
 @plugin "@tailwindcss/typography";
 
-@theme {
+@theme inline {
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
   --font-handwriting: var(--font-permanent-marker);
   --font-serif: var(--font-playfair);
 
+  --color-brand: var(--color-purple-500);
   --color-pop-purple: #B6ABF8;
   --color-pop-red: #E84E38;
   --color-pop-green: #B9E986;
@@ -61,6 +62,12 @@
   }
 
   --animate-spin-slow: spin 6s linear infinite;
+}
+
+@layer utilities {
+  .purple-gradient {
+    @apply bg-linear-to-br from-[var(--color-brand)] to-[var(--color-pop-purple)];
+  }
 }
 
 :root {
