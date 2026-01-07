@@ -5,8 +5,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/data/constants";
-
+import { CASE_STUDIES, CaseStudy } from "@/data/case-study.data";
 
 export default function OurWork() {
     const containerRef = useRef(null);
@@ -69,7 +68,7 @@ export default function OurWork() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                    {projects.map((project, index) => (
+                    {CASE_STUDIES.map((project, index) => (
                         <ProjectCard key={index} project={project} index={index} />
                     ))}
                 </div>
@@ -78,7 +77,7 @@ export default function OurWork() {
     );
 }
 
-function ProjectCard({ project, index }: { project: any, index: number }) {
+function ProjectCard({ project, index }: { project: CaseStudy, index: number }) {
     const isEven = index % 2 === 0;
 
     return (
@@ -92,8 +91,8 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
             <div className="relative w-full h-[250px] md:h-[350px] rounded-lg overflow-hidden cursor-pointer">
                 {/* Image */}
                 <Image
-                    src={project.image}
-                    alt={project.title}
+                    src={project.coverImage}
+                    alt={project.brandName}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
@@ -111,21 +110,23 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
                 {/* Category Badge - Always visible */}
                 <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-xs font-medium text-white border border-white/10 uppercase tracking-wider">
-                        {project.category}
+                        {project.industry}
                     </span>
                 </div>
             </div>
 
             <div className="space-y-2">
                 <div className="flex justify-between items-start">
-                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
-                        {project.title}
+                    <h3
+                        style={{ '--theme-color': project.themeColor } as React.CSSProperties}
+                        className={`text-2xl font-bold text-white group-hover:text-(--theme-color) transition-colors`}>
+                        {project.brandName}
                     </h3>
                 </div>
                 <p className="text-zinc-500 text-sm leading-relaxed max-w-sm">
-                    {project.description}
+                    {project.shortDescription.slice(0, 100)}...
                 </p>
-                <div className={`h-1 w-0 group-hover:w-full bg-linear-to-r ${project.color} transition-all duration-700 ease-in-out mt-4`} />
+                <div className={`h-1 w-0 group-hover:w-full bg-linear-to-r ${project.themeColor} transition-all duration-700 ease-in-out mt-4`} />
             </div>
         </motion.div>
     )

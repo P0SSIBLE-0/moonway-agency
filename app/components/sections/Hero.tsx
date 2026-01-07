@@ -29,7 +29,7 @@ export default function Hero() {
                         <motion.h1
                             initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
                             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                            transition={{ duration: 0.4 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="text-4xl md:text-7xl lg:text-[4.7rem] font-semibold leading-11 md:leading-15 tracking-tighter text-white font-sans whitespace-normal"
                         >
                             We Build <br />
@@ -39,9 +39,9 @@ export default function Hero() {
                         </motion.h1>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
+                            initial={{ opacity: 0, y: 20, filter: "blur(12px)" }}
+                            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                            transition={{ duration: 0.3 }}
                             className="flex flex-wrap gap-8 items-center pt-8"
                         >
                             <CTAButton />
@@ -54,9 +54,9 @@ export default function Hero() {
                     <div className="lg:col-span-5 relative h-[500px] lg:h-[700px] w-full flex items-center justify-center">
                         {/* Abstract Crystal/Glass Object */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
+                            initial={{ opacity: 0, scale: 0.5, rotate: 10 }}
                             animate={{ opacity: 1, scale: 1, rotate: 0 }}
-                            transition={{ duration: 1, delay: 0.2 }}
+                            transition={{ duration: 0.3, delay: 0.1, ease: "easeInOut" }}
                             className="relative -top-30 md:top-0 w-full h-full z-10"
                         >
                             <Image

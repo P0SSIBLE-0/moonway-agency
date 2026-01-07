@@ -54,7 +54,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     });
 
     return (
-        <article className="min-h-screen bg-white">
+        <article className="min-h-screen bg-gray-50">
             {/* Hero Section with Overlay */}
             <div className="relative w-full h-[60vh] min-h-[500px]">
                 {post.coverImage?.url ? (
@@ -73,7 +73,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/50 to-black/30" />
 
                 <div className="absolute inset-0 flex flex-col p-4 md:p-8">
-                    <div className="max-w-4xl mx-auto w-full h-full flex flex-col">
+                    <div className="max-w-4xl mx-auto w-full h-full flex flex-col justify-end gap-10">
                         {/* Top Bar: Back Link */}
                         <div className="md:pt-12 pt-16 mb-5">
                             <Link
@@ -131,7 +131,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
 
             {/* Article Content */}
-            <div className="max-w-3xl bg-pop-offwhite mx-auto px-4 py-10 md:py-24">
+            <div className="max-w-3xl mx-auto px-4 py-10 md:py-24">
                 <div
                     className="prose prose-base prose-gray prose-headings:font-display prose-headings:font-bold prose-headings:text-black prose-p:text-gray-700 prose-p:leading-base prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg max-w-none first-letter:text-2xl"
                     dangerouslySetInnerHTML={{ __html: post.content.html }}
